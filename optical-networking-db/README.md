@@ -71,6 +71,34 @@ The initial population is a structured baseline based on public information avai
 | Integration | Update affected tables and cross-referenced sections |
 | Review | Check units, periods, currency, definitions, and conflicting estimates |
 
+### Refresh with Codex
+Reconnect Codex to this repository for each refresh and use a pull request so proposed changes can be reviewed before merging into `main`.
+
+```text
+Connect to:
+https://github.com/FrankHuang94/optical_database_gpt
+
+Refresh optical-networking-db using information current through [DATE].
+
+1. Read the existing files first.
+2. Verify every "Refresh Needed" and "TO VERIFY" item.
+3. Prioritize primary sources.
+4. Preserve historical data and add new dated rows.
+5. Update citations, status tags, and Last Updated dates.
+6. Do not overwrite estimates without explaining the change.
+7. Summarize changed files, resolved gaps, and remaining gaps.
+8. Commit changes to a new branch and open a pull request.
+```
+
+Recommended cadence:
+
+| Frequency | Sections / Events |
+|---|---|
+| Monthly | Standards, product roadmaps, startups, regulation, and M&A |
+| Quarterly | Vendor financials, market sizing, and supply chain |
+| After OFC and ECOC | Technology, CPO, 1.6T/3.2T, and research papers |
+| Annually | Fundamentals and glossary |
+
 ## Data Tables (where applicable)
 | Field | Value | Source | Date |
 |---|---|---|---|
