@@ -1,98 +1,141 @@
 # Production Ramp and Supply Chain
 > **Last Updated:** 2026-06-09
-> **Status:** Draft
-> **Tags:** supply-chain, manufacturing, capacity, CHIPS-Act, export-controls
+> **Status:** In Review
+> **Tags:** supply-chain, manufacturing, capacity, yield, lead-time, CHIPS-Act
 
 ## Overview
-Datacenter optics production links III-V epitaxy and lasers, silicon-photonics and DSP wafers, advanced packaging, optical sub-assemblies, module assembly/test, switch integration, and hyperscaler qualification. Bottlenecks can migrate between layers as a new speed generation ramps.
+Datacenter optics production links III-V epitaxy and lasers, SiPh and DSP wafers, advanced packaging, optical subassemblies, module assembly/test, switch integration, and hyperscaler qualification. Bottlenecks migrate as a new speed generation ramps.
 
-A product announcement is not a production ramp. Pilot builds establish function, low-volume manufacturing establishes repeatability, and HVM requires yield, automated test, qualified second sources, field reliability, and customer acceptance.
+Public companies disclose revenue, capex, facilities, and selected unit targets but rarely publish optical assembly yield or customer-specific lead time. This section records hard capacity signals, distinguishes nameplate capacity from accepted shipments, and leaves unavailable yield metrics explicitly blank rather than inventing percentages.
 
-> 🔄 Refresh Needed: High Priority — replace 2025-era lead-time and capacity assumptions with supplier disclosures and channel checks.
+> ⚠️ Note: Nameplate capacity, qualified capacity, good-unit output, and customer-accepted shipments are different measures. A product announcement is not a production ramp.
 
 ## Key Findings / Highlights
-- [CONFIRMED] Advanced DSP/SerDes production is concentrated at leading foundries, especially TSMC.
-- [CONFIRMED] III-V laser/EML capacity uses specialized InP/GaAs epitaxy and fabrication distinct from silicon CMOS.
-- [CONFIRMED] China and Southeast Asia are important module-assembly regions; Fabrinet has major Thailand operations.
-- [ESTIMATED] 200G/lane optical yield and test capacity are key constraints for the 1.6T ramp [MED confidence].
-- [CONFIRMED] Export controls and entity restrictions can affect advanced chips, equipment, customers, and design collaboration; applicability is product/end-user specific.
+- [CONFIRMED] AAOI targeted 100,000 800G transceivers per month by year-end 2025, with about 35% of production planned in the US [Source: AAOI earnings coverage, 2025-11].
+- [CONFIRMED] Fabrinet reported FY2026 Q2 revenue of $1.13B; HPC revenue increased from $15.4M to $85.6M sequentially, with management targeting more than $150M at full ramp for the first program [Source: Fabrinet coverage, 2026-02].
+- [CONFIRMED] NVIDIA's 2026 arrangements with Coherent and Lumentum included $2B investments plus purchase and capacity-access provisions [Source: company announcement coverage, 2026-03].
+- [CONFIRMED] Meta and Amazon agreements are driving Corning capacity expansion in North Carolina [Source: agreement coverage, 2026].
+- [ESTIMATED] Advanced lasers, 200G/lane optical yield/test, and CPO package test/rework are the leading 2026 bottlenecks [MED confidence].
 
 ## Detailed Content
 ### Supply Chain Map
 | Layer | Inputs | Representative Players / Regions | Bottleneck |
 |---|---|---|---|
-| III-V wafer growth | InP/GaAs substrates, epitaxy | Coherent, Lumentum, Sumitomo, Mitsubishi | defect density, epi capacity |
+| III-V wafer growth | InP/GaAs substrates, epitaxy | Coherent, Lumentum, Sumitomo, Mitsubishi | defect density and epi capacity |
 | SiPh foundry | SOI wafers, masks | Intel, GF, TSMC, Tower, imec | PDK maturity, wafer/test capacity |
-| DSP/SerDes ASIC | advanced CMOS | TSMC plus fabless vendors | leading-node allocation |
-| Optical sub-assembly | PIC, laser, FAU, TIA/driver | Asia/US/Europe suppliers | alignment and known-good die |
-| Module assembly | OSA, PCB, cage, firmware | InnoLight, Eoptolink, AAOI, Fabrinet/FIT | automation, calibration, test time |
+| DSP/SerDes ASIC | advanced CMOS | TSMC and fabless vendors | leading-node allocation |
+| Optical subassembly | PIC, laser, FAU, TIA/driver | Asia/US/Europe suppliers | alignment and known-good die |
+| Module assembly | OSA, PCB, firmware, cage | InnoLight, Eoptolink, AAOI, Fabrinet/FIT | automation, calibration, test time |
 | System integration | switch, NOS, optics | Arista, Cisco, NVIDIA, ODMs | interoperability and thermals |
 | Deployment | fiber plant, qualification | hyperscalers/operators | approval cycles and field operations |
 
+### Disclosed Capacity and Ramp Signals
+| Supplier | Capacity / Ramp Signal | Date | Known | Not Disclosed |
+|---|---|---:|---|---|
+| AAOI | 100k 800G modules/month target; 35% US | 2025 year-end target | module target and geography | achieved output, product mix, yield |
+| Fabrinet | HPC revenue $15.4M to $85.6M; >$150M full-ramp target | FY2026 Q1-Q2 | financial ramp of first HPC program | units, customer, optical content, yield |
+| Coherent | $2B investment plus purchase/capacity rights | 2026-03 | financed capacity expansion | wafers/month, laser type, allocation |
+| Lumentum | $2B investment plus purchase/capacity rights; new fab | 2026-03 | major new laser/optics capacity | location, tools, output date, yield |
+| Corning | Meta up to $6B; Amazon multibillion agreement | 2026 | demand and NC expansion | fiber-km, connector units, pricing |
+| GlobalFoundries | acquired Advanced Micro Foundry | 2025-11 | Singapore SiPh capability added | consolidated photonics wafer capacity |
+| Jabil | acquired Intel SiPh product business | 2023 | product/manufacturing continuity | current module capacity and mix |
+
 ### SiPh Capacity
-| Platform | Model | Capacity Visibility | Key Risk |
+| Platform | Model | Visibility | Key Risk |
 |---|---|---|---|
-| Intel | captive/integrated | limited public detail | strategy and external access |
-| GF Fotonix | open foundry | commercial | customer ramp and packaging ecosystem |
-| TSMC | advanced integration/COUPE roadmap | [TO VERIFY] | capacity allocation and maturity |
+| Intel | captive/integrated R&D and technology | limited public detail | strategy and external access |
+| GF Fotonix / AMF | open foundry plus Singapore capability | commercial; aggregate capacity undisclosed | customer ramp and packaging ecosystem |
+| TSMC | advanced integration/COUPE roadmap | [TO VERIFY] production scope | allocation and process maturity |
 | Tower | open foundry | commercial | scale and qualified design ecosystem |
-| imec/CEA-Leti/AIM | R&D/pilot/transfer | program based | transfer to HVM |
+| imec / CEA-Leti / AIM | R&D, pilot, technology transfer | program-based | transfer to HVM |
 
-### Contract Manufacturing
-| Company | Main Role | Geography | Optical Relevance |
+### Yield Disclosure Audit
+| Layer | Comparable Numerical Yield Public? | Best Available Proxy | Required Metric |
 |---|---|---|---|
-| Fabrinet | precision optical/electromechanical manufacturing | Thailand | high |
-| Foxconn Interconnect Technology | connectors/modules/assembly | China/Asia/global | high [TO VERIFY mix] |
-| Benchmark Electronics | complex electronics manufacturing | global | selective optical/system programs |
-| module vendors/ODMs | vertically integrated module production | China/Asia | high |
+| III-V epitaxy / laser die | no | gross margin, shortages, capacity investment | epi wafer yield; good die/wafer |
+| SiPh wafer | no supplier-comparable set | qualification and MPW maturity | wafer-sort yield by process/PIC area |
+| DSP/SerDes | no optical-specific yield | advanced-node supply and margins | known-good die yield |
+| Laser/PIC attach | no | ramp delays and assembly capex | first-pass attach yield; rework rate |
+| Module calibration/test | no | test-time/capex commentary | first-pass yield; seconds/channel |
+| CPO package | no | demonstration and shipment status | package yield; engine rework |
+| Field reliability | no comparable set | warranty/RMA commentary | FIT, DPPM, annual failure rate |
 
-### Ramp Timeline
-| Technology | Pilot Production | Low Volume | HVM | Key Bottleneck |
+### Lead-Time Assessment
+| Item | 2026 Assessment | Evidence Quality |
+|---|---|---|
+| 800G modules | selected suppliers appear demand constrained; allocations likely | MED, earnings/channel evidence |
+| 1.6T modules | qualification/early ramp; 200G/lane components dominate schedule | MED, roadmap evidence |
+| advanced lasers | strategic agreements imply scarcity | HIGH inference from disclosed investments |
+| SiPh foundry | expanding through GF/AMF and other programs | MED; numerical capacity unavailable |
+| fiber/connectivity | hyperscaler agreements driving US expansion | HIGH, contractual evidence |
+| test equipment | transition supports demand; exact lead time undisclosed | LOW/MED |
+
+### Ramp Stage Definitions
+| Stage | Required Evidence |
+|---|---|
+| Engineering sample | functional device; no production commitment |
+| Customer sample | delivered for customer evaluation |
+| Qualification | environmental, reliability, interoperability tests underway/passed |
+| Low-volume manufacturing | repeatable line and customer-accepted shipments |
+| HVM | stable yield, automated test, sustained accepted output and revenue |
+| Constrained HVM | repeatable HVM exists but qualified demand exceeds supply |
+
+### Technology Ramp Timeline
+| Technology | Pilot | Low Volume | HVM Assessment | Key Bottleneck |
 |---|---|---|---|---|
-| 800G-DR4/DR8 | 2022-2023 | 2023 | 2024-2025 | laser/PIC yield, test |
-| 800G-SR8 | 2022-2023 | 2023-2024 | 2024-2025 | VCSEL bandwidth/reliability |
-| LPO 800G | 2023-2024 | 2024-2025E | [TO VERIFY] | host channel and interoperability |
-| CPO 51.2T | 2022-2024 demos | limited pilots | [TO VERIFY] | package yield/serviceability |
-| 1.6T-DR8 | 2024-2025 samples | 2025-2026E | 2026-2027E | 200G/lane ecosystem |
-| CPO 102.4T | 2024-2026 demos | 2026-2027E | 2027+ | optical engine/ELS/package |
+| 800G DR4/DR8 | 2022-2023 | 2023 | 2024-2026 | laser/PIC yield and test |
+| 800G SR8 | 2022-2023 | 2023-2024 | 2024-2026 | VCSEL bandwidth/reliability |
+| LPO 800G | 2023-2024 | 2024-2026E | [TO VERIFY] | host channel and interoperability |
+| CPO 51.2T | 2022-2024 demos | limited customer deliveries | HVM volume undisclosed | package yield/serviceability |
+| 1.6T DR8 | 2024-2025 samples | 2025-2026E | 2026-2027E | 200G/lane ecosystem |
+| CPO 102.4T | 2024-2026 announcements/demos | 2026-2027E | 2027+ [LOW confidence] | engine, ELS, package/test |
 
-> ⚠️ Note: Timeline ranges are synthesis estimates, not supplier commitments. Update at SKU and customer-qualification level.
+### Supplier Data Request
+| Metric | Unit | Frequency |
+|---|---|---|
+| Nameplate capacity | units/month or wafers/month | quarterly |
+| Qualified capacity | customer-approved units/month | quarterly |
+| Good-unit output | accepted units/month | monthly |
+| First-pass yield | % | monthly |
+| Rework recovery | % | monthly |
+| Cycle time | days from wafer start to shipment | monthly |
+| Quoted lead time | weeks by SKU | monthly |
+| On-time delivery | % | monthly |
+| Field failure | DPPM or FIT | quarterly |
 
-### Geographic Concentration
+### Geographic Concentration and Policy
 | Region | Concentration | Risk |
 |---|---|---|
-| Taiwan | advanced CMOS, packaging, emerging SiPh | geopolitics, capacity allocation |
+| Taiwan | advanced CMOS, packaging, emerging SiPh | geopolitics and allocation |
 | China | module assembly and optical suppliers | export controls, tariffs, customer restrictions |
-| US | fabless DSP, SiPh IP, compound-semiconductor assets | higher cost, limited specialized capacity |
+| US | fabless DSP, SiPh IP, compound-semiconductor assets | cost and specialized capacity |
 | Japan | lasers, materials, precision components | supplier concentration |
-| Southeast Asia | contract manufacturing | logistics, labor, geographic concentration |
-| Europe | R&D, equipment, photonics institutes | scale-up transfer |
+| Southeast Asia | contract manufacturing | logistics and geographic concentration |
+| Europe | research institutes and equipment | HVM technology transfer |
 
-### Policy Effects
-- US CHIPS Act programs may support domestic advanced packaging, silicon photonics, and compound semiconductors, but award-specific capacity must be verified.
-- AIM Photonics supports domestic process access, packaging, test, education, and prototyping.
-- BIS rules can restrict exports based on classification, destination, end user, and end use; “optical module” alone is not a sufficient conclusion.
-- Entity List impacts are company-specific and change over time [See: [19_regulatory_and_standards_bodies.md](19_regulatory_and_standards_bodies.md)].
+US CHIPS programs may support domestic packaging, SiPh, and compound semiconductors, but award-specific photonics capacity must be verified. Export-control details are maintained in [19_regulatory_and_standards_bodies.md](19_regulatory_and_standards_bodies.md).
 
 ## Data Tables (where applicable)
 | Field | Value | Source | Date |
 |---|---|---|---|
-| Leading DSP foundry concentration | TSMC-heavy | supplier disclosures | 2024 |
-| US shared SiPh ecosystem | AIM Photonics | AIM | active 2024 |
-| Major optical CM location | Thailand | Fabrinet filings | 2024 |
-| 800G ramp | AI-led HVM expansion | vendor commentary | 2024 |
-| 1.6T bottleneck | 200G/lane yield/test [ESTIMATED] | industry synthesis | 2025E |
+| AAOI 800G target | 100k modules/month | AAOI coverage | 2025 year-end |
+| AAOI US production target | ~35% | AAOI coverage | 2025 |
+| Fabrinet FY26 Q2 revenue | $1.13B | Fabrinet | 2026-02 |
+| Fabrinet FY26 Q2 HPC revenue | $85.6M | Fabrinet | 2026-02 |
+| NVIDIA supplier investments | $2B each to Coherent and Lumentum | company coverage | 2026-03 |
 
 ## Open Questions / Gaps
-- Collect wafer starts, tool capacity, yields, lead times, and utilization by layer.
-- Map country of origin and alternate source for each critical component.
-- Track customer qualification dates separately from vendor HVM claims.
-- Add current ECCNs, Entity List parties, and license requirements with counsel.
-- Quantify CHIPS Act awards tied directly to photonics capacity.
+- Confirm whether AAOI achieved 100k/month and identify DR4/DR8/2xFR4 mix.
+- Obtain Coherent/Lumentum fab locations, tool schedules, and qualified output.
+- Quantify GF/AMF, TSMC, Intel, and Tower photonics wafer capacity.
+- Obtain first-pass yield, rework, cycle time, and field failure under NDA.
+- Build a monthly lead-time survey across lasers, DSPs, PICs, modules, connectors, and test equipment.
 
 ## References
-- US CHIPS for America | https://www.nist.gov/chips | 2026-06-09
-- AIM Photonics | https://www.aimphotonics.com/ | 2026-06-09
-- BIS Entity List | https://www.bis.gov/regulations/ear/744-supp-4 | 2026-06-09
-- Fabrinet filings | https://investor.fabrinet.com/ | 2026-06-09
+- AAOI capacity coverage | https://www.investors.com/news/technology/applied-optoelectronics-stock-aaoi-applied-optoelectronics-earnings-q32025/ | 2026-06-09
+- Fabrinet ramp coverage | https://www.investors.com/research/the-new-america/fabrinet-stock-fn/ | 2026-06-09
+- NVIDIA supplier agreements | https://www.wsj.com/tech/ai/nvidia-to-invest-2-billion-in-both-lumentum-and-coherent-b047f619 | 2026-06-09
+- Meta-Corning agreement | https://www.wsj.com/tech/meta-enters-up-to-6-billion-data-center-fiber-optic-cable-deal-with-corning-4a085f73 | 2026-06-09
+- Amazon-Corning agreement | https://www.wsj.com/tech/amazon-enters-agreement-with-corning-for-optical-fiber-for-data-centers-352c7fa7 | 2026-06-09
 - GlobalFoundries Fotonix | https://gf.com/technology-platforms/fotonix/ | 2026-06-09
+- AIM Photonics | https://www.aimphotonics.com/ | 2026-06-09
