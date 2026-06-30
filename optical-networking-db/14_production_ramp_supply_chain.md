@@ -1,5 +1,5 @@
 # Production Ramp and Supply Chain
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** supply-chain, manufacturing, capacity, yield, lead-time, CHIPS-Act
 
@@ -16,6 +16,28 @@ Public companies disclose revenue, capex, facilities, and selected unit targets 
 - [CONFIRMED] NVIDIA's 2026 arrangements with Coherent and Lumentum included $2B investments plus purchase and capacity-access provisions [Source: company announcement coverage, 2026-03].
 - [CONFIRMED] Meta and Amazon agreements are driving Corning capacity expansion in North Carolina [Source: agreement coverage, 2026].
 - [ESTIMATED] Advanced lasers, 200G/lane optical yield/test, and CPO package test/rework are the leading 2026 bottlenecks [MED confidence].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  WAFER["DSP / PIC / laser wafers"] --> DIE["Probe and known-good die"]
+  DIE --> PKG["Packaging and optical engine build"]
+  PKG --> MOD["Module assembly"]
+  MOD --> CAL["Calibration and firmware"]
+  CAL --> TEST["Burn-in, optical, electrical, interoperability test"]
+  TEST --> QUAL["Customer qualification"]
+  QUAL --> HVM["High-volume manufacturing"]
+```
+
+```mermaid
+flowchart TB
+  BOT["Ramp bottlenecks"] --> L["Laser and EML yield"]
+  BOT --> D["Advanced-node DSP wafer starts"]
+  BOT --> P["Fiber attach and optical packaging"]
+  BOT --> T["Test time and equipment slots"]
+  BOT --> C["Customer qualification cycles"]
+  BOT --> G["Geographic and export-control constraints"]
+```
 
 ## Detailed Content
 ### Supply Chain Map

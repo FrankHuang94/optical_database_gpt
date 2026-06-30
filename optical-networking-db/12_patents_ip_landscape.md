@@ -1,5 +1,5 @@
 # Patents and IP Landscape
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** patents, IP, patent-families, FTO, silicon-photonics, coherent-DSP
 
@@ -16,6 +16,27 @@ This section includes a reproducible first-pass Google Patents screen and the no
 - [CONFIRMED] Lumentum returned 51 silicon-photonics and 54 coherent-optical results.
 - [CONFIRMED] NVIDIA returned seven exact “co-packaged optics” results; recent/unpublished applications and Mellanox aliases may understate the portfolio.
 - [ESTIMATED] Highest practical FTO density remains III-V integration, fiber coupling, ring control, coherent DSP/FEC, and optical-engine packaging [MED confidence].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  Q["Keyword and CPC query"] --> F["Patent families"]
+  F --> N["Normalize assignees and acquisitions"]
+  N --> C["Cluster by technology area"]
+  C --> S["Score quality and recency"]
+  S --> R["Freedom-to-operate risk map"]
+  R --> A["Action: license, design-around, monitor, or challenge"]
+```
+
+```mermaid
+flowchart TB
+  IP["Optical networking IP map"] --> L["Lasers and modulators"]
+  IP --> P["PIC layout and couplers"]
+  IP --> K["Packaging and fiber attach"]
+  IP --> D["DSP, FEC, equalization"]
+  IP --> S["System control and telemetry"]
+  IP --> M["Manufacturing and test"]
+```
 
 ## Detailed Content
 ### Query Definition v1.0

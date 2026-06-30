@@ -1,5 +1,5 @@
 # Component Vendors
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** components, transceivers, lasers, DSP, manufacturing
 
@@ -16,6 +16,39 @@ Customer concentration, China exposure, product-cycle timing, utilization, and m
 - [CONFIRMED] Cisco completed its Acacia acquisition in 2021 [Source: Cisco, 2021].
 - [CONFIRMED] Fabrinet is a major outsourced manufacturer for optical communications products.
 - [ESTIMATED] InnoLight, Eoptolink, Accelink/HG Genuine, and Source Photonics are central to China-linked datacenter module supply, with exposure varying by customer and export rules.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  LASER["Laser / EML / CW source"] --> TOSA["TOSA or optical engine"]
+  DSP["PAM4 / coherent DSP"] --> PCB["Module PCB"]
+  SIPH["SiPh or III-V PIC"] --> TOSA
+  TOSA --> MOD["Finished transceiver"]
+  ROSA["ROSA / photodiode / TIA"] --> MOD
+  MOD --> TEST["Burn-in and optical/electrical test"]
+  TEST --> CLOUD["Cloud or system vendor qualification"]
+```
+
+```mermaid
+flowchart TB
+  V["Vendor economic exposure"] --> L["Laser and component yield"]
+  V --> D["DSP node and IP cycle"]
+  V --> A["Assembly scale and automation"]
+  V --> C["Customer concentration"]
+  V --> P["Export-control and geographic policy"]
+```
+
+### Official Visual References
+Use these official pages for product photos, architecture diagrams, and investor-presentation visuals. Link to the pages directly unless image reuse rights are explicit.
+
+| Vendor | Visual Material to Review | Official Source |
+|---|---|---|
+| Lumentum | datacom lasers, EMLs, coherent components, product-family images | https://www.lumentum.com/en/products |
+| Coherent | datacenter transceivers, lasers, coherent components, SiPh-related product visuals | https://www.coherent.com/networking |
+| Marvell | PAM4 and coherent DSP product diagrams and connectivity block diagrams | https://www.marvell.com/products/networking/optical-dsp.html |
+| InnoLight | 400G/800G/1.6T module product photos and form-factor examples | https://www.innolight.com/en |
+| Fabrinet | contract-manufacturing and precision optical assembly context | https://investor.fabrinet.com/ |
+| Viavi | optical and high-speed electrical test workflow diagrams | https://www.viavisolutions.com/en-us/solutions/high-speed-network-test |
 
 ## Detailed Content
 ### Vendor Matrix

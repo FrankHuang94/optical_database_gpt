@@ -1,5 +1,5 @@
 # Executive Summary
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** executive-summary, market, roadmap, AI-infrastructure, investment
 
@@ -16,6 +16,30 @@ The near-term market remains dominated by serviceable pluggable modules and dire
 - [CONFIRMED] IEEE 802.3dj is defining 200 Gb/s-lane building blocks for 800G and 1.6T Ethernet [Source: IEEE 802.3dj, 2024].
 - [ESTIMATED] 3.2T modules are a 2026-2028 engineering/early-adoption topic rather than established 2025 volume production [Source: vendor roadmaps, 2024; LOW confidence].
 - [CONFIRMED] Pluggables retain advantages in field replacement and supply-chain modularity; CPO reduces high-speed electrical reach but introduces packaging and serviceability complexity [Source: OIF CPO Framework, 2023].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  A["AI cluster growth"] --> B["More east-west traffic"]
+  B --> C["Faster switch ASICs"]
+  C --> D["800G and 1.6T optics"]
+  D --> E["Higher laser, DSP, module, and test demand"]
+  E --> F["Power, thermal, yield, and supply constraints"]
+  F --> G["CPO, LPO, coherent DCI, and optical I/O roadmaps"]
+  G --> C
+```
+
+```mermaid
+flowchart TB
+  R["Reader workflow"] --> T["Technology roadmap"]
+  R --> V["Vendor landscape"]
+  R --> S["Standards and regulation"]
+  R --> M["Market and investment"]
+  T --> T1["02, 04, 05, 06, 07, 17, 18"]
+  V --> V1["08, 09, 10, 11, 14, 15"]
+  S --> S1["03, 12, 13, 19"]
+  M --> M1["16, 20"]
+```
 
 ## Detailed Content
 ### Market Snapshot

@@ -1,5 +1,5 @@
 # Coherent vs Direct Detect
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** coherent, IMDD, PAM4, ZR, DCI
 
@@ -16,6 +16,28 @@ Datacenter choice is reach- and fiber-constrained. IM-DD PAM4 remains preferred 
 - [CONFIRMED] IM-DD avoids local-oscillator and coherent DSP complexity and is favored below roughly 10 km today.
 - [ESTIMATED] The coherent/direct-detect crossover depends more on fiber count, reach, operations, and total link cost than distance alone [HIGH confidence].
 - [TO VERIFY] 800ZR and coherent solutions below traditional DCI reaches may shift the crossover during 2025-2028.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  TX["Transmitter"] --> AMP["Optical channel"]
+  AMP --> RX["Receiver"]
+  RX --> DD{"Direct detect?"}
+  DD -->|"Yes"| PD["Photodiode measures intensity"]
+  DD -->|"No"| LO["Local oscillator and coherent mixer"]
+  LO --> DSP["Coherent DSP recovers phase and polarization"]
+  PD --> EQ["PAM4 equalization and FEC"]
+```
+
+```mermaid
+flowchart TB
+  R["Reach and fiber economics"] --> M{"Best fit"}
+  M -->|"In-rack / short campus"| D["Direct detect"]
+  M -->|"DCI and metro"| C["Coherent ZR/ZR+"]
+  M -->|"Longer or fiber-constrained"| H["Higher-performance coherent"]
+  D --> X["Lower module cost and power"]
+  C --> Y["Higher spectral efficiency and operational reach"]
+```
 
 ## Detailed Content
 ### Technical Comparison

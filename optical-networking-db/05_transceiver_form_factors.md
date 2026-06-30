@@ -1,5 +1,5 @@
 # Transceiver Form Factors
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** pluggables, OSFP, QSFP-DD, thermal, density
 
@@ -16,6 +16,27 @@ At 1.6T and beyond, front-panel area, connector count, airflow, module power, ca
 - [CONFIRMED] CFP2 remains important for coherent transport even as client optics favor QSFP-DD/OSFP.
 - [ESTIMATED] 800G DSP pluggables commonly operate around 14-20 W depending reach and design [Source: vendor datasheets, 2023-2024; MED confidence].
 - [ESTIMATED] 1.6T pluggables often target roughly 20-30 W envelopes; exact values require product-level validation [LOW confidence].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  S["Switch ASIC"] --> PCB["High-speed PCB traces"]
+  PCB --> CAGE["Front-panel cage"]
+  CAGE --> MOD["Pluggable module"]
+  MOD --> FIBER["Fiber plant"]
+  PCB -.-> OBO["On-board optics"]
+  S -.-> CPO["Co-packaged optics"]
+```
+
+```mermaid
+flowchart TB
+  QSFP["QSFP28 / QSFP-DD"] --> OSFP["OSFP"]
+  OSFP --> XD["OSFP-XD / higher-density variants"]
+  XD --> OBO["OBO"]
+  OBO --> CPO["CPO / optical I/O"]
+  QSFP --> P1["Serviceable and familiar"]
+  CPO --> P2["Best electrical reach and density, harder service model"]
+```
 
 ## Detailed Content
 ### Form Factor Comparison

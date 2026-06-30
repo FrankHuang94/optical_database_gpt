@@ -1,5 +1,5 @@
 # Investment and M&A Tracker
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** investment, valuation, financials, M-and-A, venture-funding, catalysts
 
@@ -16,6 +16,26 @@ The public-company table is a June 9, 2026 snapshot and will become stale. Trans
 - [CONFIRMED] HPE completed its approximately $14B Juniper acquisition on July 2, 2025 after a US DOJ settlement [Source: HPE/DOJ, 2025].
 - [CONFIRMED] Nokia completed its approximately $2.3B Infinera acquisition in February 2025 [Source: Nokia, 2025].
 - [CONFIRMED] NVIDIA's $2B investments in each of Coherent and Lumentum are strategic investments, not acquisitions [Source: company announcement coverage, 2026-03].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  TECH["Technology inflection"] --> REV["Revenue growth or mix shift"]
+  REV --> MARGIN["Gross margin and operating leverage"]
+  MARGIN --> FCF["Cash flow"]
+  FCF --> VAL["Valuation framework"]
+  VAL --> CATALYST["Catalysts: earnings, standards, launches, M&A"]
+  RISK["Customer concentration, export controls, ASP erosion"] --> VAL
+```
+
+```mermaid
+flowchart TB
+  MA["Strategic M&A logic"] --> IP["Acquire IP or DSP assets"]
+  MA --> CUSTOMER["Acquire customer qualification"]
+  MA --> CAPACITY["Secure manufacturing scale"]
+  MA --> STACK["Build vertical system stack"]
+  MA --> GEO["Reduce geographic or supplier risk"]
+```
 
 ## Detailed Content
 ### Public Company Snapshot

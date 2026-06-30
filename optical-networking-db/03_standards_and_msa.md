@@ -1,5 +1,5 @@
 # Standards and Multi-Source Agreements
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** IEEE-802.3, OIF, MSA, CMIS, Ethernet
 
@@ -16,6 +16,26 @@ The current distinction is important: IEEE P802.3dj reached Draft 3.0 Standards 
 - [CONFIRMED] OIF-800ZR-01.0 was published in October 2024 and OIF-800LR-01.0 in April 2025 [Source: OIF IA register].
 - [CONFIRMED] CMIS 5.4 was published in May 2026 [Source: OIF IA register, 2026-05].
 - [CONFIRMED] OIF active work includes 1600ZR, 1600ZR+, 1600CL, 12.8T NPO, Compute Optics Interface, and 448G signaling [Source: OIF Current Work, accessed 2026-06-09].
+
+## Visual Guide
+```mermaid
+flowchart TB
+  A["Market need"] --> B["Study group / project authorization"]
+  B --> C["Draft technical objectives"]
+  C --> D["Task force drafts"]
+  D --> E["Ballot and comment resolution"]
+  E --> F["Published standard or implementation agreement"]
+  F --> G["Silicon, module, test, and system qualification"]
+```
+
+```mermaid
+flowchart LR
+  IEEE["IEEE 802.3"] --> ETH["Ethernet rates, PHYs, media"]
+  OIF["OIF"] --> CEI["CEI electrical interfaces"]
+  OIF --> ZR["ZR/ZR+ coherent agreements"]
+  MSA["Module MSAs"] --> FF["QSFP-DD, OSFP, OBO, CPO mechanics"]
+  OCP["OCP"] --> DEPLOY["Open rack, NIC, switch, and optics deployment context"]
+```
 
 ## Detailed Content
 ### IEEE 802.3 Status

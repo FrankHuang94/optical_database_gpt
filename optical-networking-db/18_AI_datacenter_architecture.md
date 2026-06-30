@@ -1,5 +1,5 @@
 # AI Datacenter Architecture
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** AI, training, inference, Ethernet, InfiniBand, scale-up, scale-out
 
@@ -16,6 +16,27 @@ Optical architecture follows three domains: scale-up inside a compute domain, sc
 - [CONFIRMED] UEC was formed to improve Ethernet for AI/HPC workloads [Source: UEC, 2023].
 - [CONFIRMED] UALink targets an open accelerator scale-up interconnect [Source: UALink Consortium, 2024].
 - [ESTIMATED] 100K+ accelerator clusters increase the value of OCS and multi-datacenter scale-across, but workload scheduling must accommodate circuit reconfiguration [MED confidence].
+
+## Visual Guide
+```mermaid
+flowchart TB
+  GPU["GPU / accelerator tray"] --> SCALEUP["Scale-up fabric"]
+  GPU --> NIC["NIC / DPU"]
+  NIC --> TOR["Top-of-rack or rail switch"]
+  TOR --> SPINE["Spine / super-spine"]
+  SPINE --> DCI["Scale-across / DCI"]
+  TOR --> STORAGE["Storage and inference services"]
+```
+
+```mermaid
+flowchart LR
+  TRAIN["Training"] --> BW["Highest bisection bandwidth"]
+  TRAIN --> LAT["Tight latency and loss control"]
+  INF["Inference"] --> FAN["Fan-out and service locality"]
+  INF --> COST["Cost and power per query"]
+  BW --> OPT["800G, 1.6T, CPO, OCS roadmaps"]
+  COST --> OPT
+```
 
 ## Detailed Content
 ### Training vs Inference

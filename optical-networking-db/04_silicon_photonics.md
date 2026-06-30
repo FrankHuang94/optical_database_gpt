@@ -1,5 +1,5 @@
 # Silicon Photonics
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** silicon-photonics, foundry, integration, lasers, LPO
 
@@ -16,6 +16,26 @@ SiPh competes with and complements InP/EML and VCSEL platforms. Its strongest sy
 - [CONFIRMED] Rings are compact and low-energy but thermally sensitive; MZMs are larger but generally more broadband and tolerant.
 - [CONFIRMED] External laser sources remain common because silicon is an inefficient light emitter.
 - [ESTIMATED] Packaging, coupling, test, and laser attach can dominate cost and yield more than the bare PIC [Source: AIM Photonics/OFC presentations, 2023; HIGH confidence].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  W["CMOS-compatible wafer"] --> WG["Waveguides"]
+  WG --> MOD["Modulators"]
+  WG --> PD["Photodiodes"]
+  LASER["External or bonded laser"] --> MOD
+  MOD --> COUPLE["Edge or grating couplers"]
+  PD --> TIA["TIA / DSP interface"]
+  COUPLE --> FIBER["Fiber array"]
+```
+
+```mermaid
+flowchart TB
+  A["Integration choice"] --> B{"Where is the laser?"}
+  B -->|"External laser source"| C["Easier thermal isolation; more packaging"]
+  B -->|"Bonded III-V laser"| D["Denser module; harder yield and reliability"]
+  B -->|"Monolithic III-V PIC"| E["Strong optical performance; less CMOS leverage"]
+```
 
 ## Detailed Content
 ### Device Fundamentals

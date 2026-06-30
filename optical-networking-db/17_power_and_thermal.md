@@ -1,5 +1,5 @@
 # Power and Thermal
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** power, thermal, pJ-per-bit, liquid-cooling, LPO, CPO
 
@@ -16,6 +16,26 @@ Public 2025-2026 CPO comparisons are primarily vendor models rather than indepen
 - [CONFIRMED] Broadcom claimed Bailly's optical interconnect uses 70% less power than a pluggable alternative [Source: Broadcom, 2024].
 - [ESTIMATED] Typical 800G DSP pluggables remain roughly 14-20 W for many module classes; reach and thermal envelope materially affect comparison [MED confidence].
 - [ESTIMATED] CPO can reduce switch I/O energy, but complete-system savings depend on external lasers, control, cooling, redundancy, yield, and repair [HIGH confidence].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  ASIC["Switch ASIC"] --> SERDES["SerDes power"]
+  SERDES --> DSP["Module DSP / retimer power"]
+  DSP --> OPT["Laser, modulator, TIA power"]
+  OPT --> COOL["Fan and cooling overhead"]
+  COOL --> FAC["Facility PUE and power delivery"]
+```
+
+```mermaid
+flowchart TB
+  P["Power reduction levers"] --> LPO["LPO / LRO: remove or simplify DSP"]
+  P --> CPO["CPO: shorten electrical reach"]
+  P --> NODE["Advanced CMOS DSP nodes"]
+  P --> LASER["More efficient lasers and external laser sharing"]
+  P --> AIR["Better airflow, heatsinks, and liquid-assist options"]
+  P --> ARCH["Topology changes that reduce optical hops"]
+```
 
 ## Detailed Content
 ### Evidence Hierarchy

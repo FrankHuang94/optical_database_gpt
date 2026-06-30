@@ -1,5 +1,5 @@
 # Systems Vendors
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** switching, routing, optical-transport, AI-networking, systems
 
@@ -16,6 +16,39 @@ Revenue splits are not consistently disclosed. The database therefore separates 
 - [CONFIRMED] HPE announced an agreement to acquire Juniper Networks in January 2024; current closing status requires verification.
 - [CONFIRMED] Nokia announced an agreement to acquire Infinera in June 2024; current closing/integration status requires verification.
 - [ESTIMATED] AI revenue attribution is not comparable across vendors because definitions include systems, optics, routing, and software differently.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  ASIC["Switch / router silicon"] --> SYSTEM["Switch, router, or optical transport shelf"]
+  OPTICS["Pluggable or embedded optics"] --> SYSTEM
+  NOS["NOS, telemetry, automation"] --> SYSTEM
+  SYSTEM --> FABRIC["AI fabric, cloud DC, DCI, or metro network"]
+  FABRIC --> SERVICES["Support, software, and lifecycle revenue"]
+```
+
+```mermaid
+flowchart TB
+  A["Systems vendor positioning"] --> B["Ethernet switching"]
+  A --> C["InfiniBand / accelerated networking"]
+  A --> D["Coherent transport"]
+  A --> E["Routing plus optical"]
+  B --> F["Arista, Cisco, Juniper/HPE"]
+  C --> G["NVIDIA"]
+  D --> H["Ciena, Nokia/Infinera, Cisco/Acacia"]
+```
+
+### Official Visual References
+Use these official pages for system photos, architecture diagrams, and roadmap visuals. Link to the pages directly unless image reuse rights are explicit.
+
+| Vendor | Visual Material to Review | Official Source |
+|---|---|---|
+| NVIDIA | Spectrum-X Ethernet architecture, accelerated networking diagrams, switch platform visuals | https://www.nvidia.com/en-us/networking/ethernet/spectrum-x/ |
+| Broadcom | Tomahawk / StrataXGS switch silicon positioning and platform diagrams | https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs |
+| Ciena | WaveLogic coherent engine visuals, DCI architecture diagrams, system portfolio graphics | https://www.ciena.com/products/wavelogic |
+| Arista | 800G cloud networking solution diagrams and switch-family visuals | https://www.arista.com/en/solutions/800g |
+| Cisco | Silicon One architecture visuals and routed-optical/coherent context | https://www.cisco.com/site/us/en/products/networking/silicon-one/index.html |
+| Nokia | Photonic Service Engine visuals and optical transport architecture graphics | https://www.nokia.com/networks/ip-networks/photonic-service-engine/ |
 
 ## Detailed Content
 ### Vendor Matrix

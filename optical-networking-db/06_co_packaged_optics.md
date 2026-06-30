@@ -1,5 +1,5 @@
 # Co-Packaged Optics
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** CPO, optical-I-O, switch-ASIC, packaging, external-laser
 
@@ -16,6 +16,30 @@ CPO has progressed from framework work and demonstrations to named platforms, di
 - [CONFIRMED] NVIDIA disclosed 144x800G / 115.2T for Quantum-X, 128x800G / 102.4T for SN6810, and a 512x800G / 409.6T system for SN6800 [Source: NVIDIA, 2025-2026].
 - [CONFIRMED] External laser source modules improve laser serviceability and isolate laser heat and reliability from the switch package [Source: OIF ELSFP work].
 - [ESTIMATED] 2026 is an early-system-adoption year for CPO, with package yield, repair model, field reliability, and independent power data still gating broad adoption [MED confidence].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  ASIC["Switch ASIC"] --> PKG["Organic or glass package"]
+  PKG --> OE1["Optical engine"]
+  PKG --> OE2["Optical engine"]
+  OE1 --> FA1["Fiber attach"]
+  OE2 --> FA2["Fiber attach"]
+  ELS["External laser source"] --> OE1
+  ELS --> OE2
+  CTRL["Management, telemetry, test"] --> OE1
+  CTRL --> OE2
+```
+
+```mermaid
+flowchart TB
+  A["CPO readiness gate"] --> B["Electrical channel validated"]
+  B --> C["Laser redundancy and replacement model"]
+  C --> D["Package yield and known-good optical engines"]
+  D --> E["Thermal path verified at system airflow"]
+  E --> F["Field service process accepted"]
+  F --> G["Production qualification"]
+```
 
 ## Detailed Content
 ### Architecture

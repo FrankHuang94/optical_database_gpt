@@ -1,5 +1,5 @@
 # Regulatory and Standards Bodies
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** IEEE, OIF, ETSI, ITU-T, OCP, UEC, export-controls
 
@@ -16,6 +16,25 @@ Detailed IEEE/OIF technical project status belongs in [03_standards_and_msa.md](
 - [CONFIRMED] The January 2025 US AI Diffusion Rule was rescinded before implementation in May 2025; separate advanced-computing and semiconductor controls remained [Source: BIS, 2025-05].
 - [CONFIRMED] China-oriented accelerator licensing and temporary 2025 EDA restrictions demonstrate that product and software policy can change on short notice.
 - [CONFIRMED] CHIPS incentives and export controls affect the same supply chain in opposite directions: subsidizing selected domestic capacity while restricting selected transfers.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  EVENT["New rule, standard, or restriction"] --> CLASS["Classify: standards, export, procurement, subsidy"]
+  CLASS --> SCOPE["Map affected products and entities"]
+  SCOPE --> SUPPLY["Assess supply-chain exposure"]
+  SUPPLY --> ACTION["Update qualification, sourcing, or compliance plan"]
+  ACTION --> MONITOR["Monitor amendments and enforcement"]
+```
+
+```mermaid
+flowchart LR
+  IEEE["IEEE"] --> STD["Ethernet PHY standards"]
+  OIF["OIF"] --> IA["Electrical and coherent IAs"]
+  OCP["OCP"] --> OPEN["Open rack and network deployment"]
+  UEC["UEC"] --> AIETH["AI Ethernet transport"]
+  BIS["US BIS and allied controls"] --> EXPORT["Export-control constraints"]
+```
 
 ## Detailed Content
 ### Standards and Industry Bodies

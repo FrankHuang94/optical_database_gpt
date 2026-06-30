@@ -1,5 +1,5 @@
 # Technology Roadmap
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** roadmap, Ethernet, lane-speed, switch-ASIC, 1.6T, 3.2T
 
@@ -16,6 +16,39 @@ Dates describe first material ecosystem availability, not universal deployment. 
 - [CONFIRMED] IEEE 802.3df standardized 800GbE; IEEE 802.3dj addresses 200G, 400G, 800G, and 1.6T objectives using 200G-class lanes [Source: IEEE, 2024].
 - [ESTIMATED] 102.4T switches and 1.6T front-panel optics form the next broad system transition [MED confidence].
 - [TO VERIFY] Claims of 3.2T volume in 2026-2027 should be treated as roadmap targets, not established production.
+
+## Visual Guide
+```mermaid
+timeline
+  title Datacenter Optical Roadmap
+  2010 : 40G QSFP+ : 4x10G lanes
+  2017 : 100G and 400G standards : 25G and 50G/100G lanes
+  2023 : 800G AI ramp : 8x100G PAM4 modules
+  2025 : 1.6T qualification : 8x200G lane class
+  2026 : 102.4T switching : 224G electrical ecosystem
+  2028 : 3.2T+ exploration : CPO, LPO, optical I/O options
+```
+
+```mermaid
+flowchart LR
+  A["25G NRZ"] --> B["50G PAM4"]
+  B --> C["100G PAM4"]
+  C --> D["200G PAM4"]
+  D --> E["400G-class research"]
+  C --> M1["800G = 8 lanes"]
+  D --> M2["1.6T = 8 lanes"]
+  D --> M3["3.2T = 16 lanes or new architecture"]
+```
+
+### Official Roadmap Visual References
+| Organization | Visual Material to Review | Official Source |
+|---|---|---|
+| Ethernet Alliance | Ethernet speed roadmap and ecosystem timing graphics | https://ethernetalliance.org/technology/roadmap/ |
+| IEEE 802.3 | project timelines, objectives, and standards status pages | https://www.ieee802.org/3/ |
+| OIF | CEI-112G/224G and coherent implementation-agreement visuals | https://www.oiforum.com/technical-work/ |
+| Broadcom | switch ASIC generation positioning and platform visuals | https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs |
+| Marvell | optical DSP roadmap and module electrical-interface diagrams | https://www.marvell.com/products/networking/optical-dsp.html |
+| NVIDIA | Spectrum-X / Quantum-X networking architecture visuals | https://www.nvidia.com/en-us/networking/ |
 
 ## Detailed Content
 ### Generation Timeline

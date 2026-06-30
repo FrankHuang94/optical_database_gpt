@@ -1,5 +1,5 @@
 # Datacenter Optical Networking Knowledge Database
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** datacenter-optics, AI-infrastructure, silicon-photonics, transceivers, CPO, market-research
 
@@ -21,28 +21,57 @@ The database uses a canonical topic structure: files `00` through `20` are the o
 ### Quick Access
 | Section | File | Status | Last Updated |
 |---|---|---|---|
-| Master index | README.md | In Review | 2026-06-09 |
-| Executive summary | [00](00_executive_summary.md) | Draft | 2026-06-09 |
-| Technology overview | [01](01_technology_overview.md) | Draft | 2026-06-09 |
-| Technology roadmap | [02](02_tech_roadmap.md) | Draft | 2026-06-09 |
-| Standards and MSAs | [03](03_standards_and_msa.md) | In Review | 2026-06-09 |
-| Silicon photonics | [04](04_silicon_photonics.md) | Draft | 2026-06-09 |
-| Transceiver form factors | [05](05_transceiver_form_factors.md) | Draft | 2026-06-09 |
-| Co-packaged optics | [06](06_co_packaged_optics.md) | In Review | 2026-06-09 |
-| Coherent vs direct detect | [07](07_coherent_vs_direct_detect.md) | Draft | 2026-06-09 |
-| Hyperscalers and supplier relationships | [08](08_vendors_hyperscalers.md) | In Review | 2026-06-09 |
-| Component vendors | [09](09_vendors_components.md) | Draft | 2026-06-09 |
-| Systems vendors | [10](10_vendors_systems.md) | Draft | 2026-06-09 |
-| Startups watchlist | [11](11_startups_watchlist.md) | In Review | 2026-06-09 |
-| Patents and IP | [12](12_patents_ip_landscape.md) | In Review | 2026-06-09 |
-| Research papers | [13](13_key_research_papers.md) | In Review | 2026-06-09 |
-| Production and supply chain | [14](14_production_ramp_supply_chain.md) | In Review | 2026-06-09 |
-| Competitive landscape | [15](15_competitive_landscape.md) | Draft | 2026-06-09 |
-| Market sizing | [16](16_market_sizing.md) | In Review | 2026-06-09 |
-| Power and thermal | [17](17_power_and_thermal.md) | In Review | 2026-06-09 |
-| AI datacenter architecture | [18](18_AI_datacenter_architecture.md) | Draft | 2026-06-09 |
-| Regulation and standards bodies | [19](19_regulatory_and_standards_bodies.md) | In Review | 2026-06-09 |
-| Investment and M&A | [20](20_investment_and_ma_tracker.md) | In Review | 2026-06-09 |
+| Master index | README.md | In Review | 2026-06-30 |
+| Executive summary | [00](00_executive_summary.md) | Draft | 2026-06-30 |
+| Technology overview | [01](01_technology_overview.md) | Draft | 2026-06-30 |
+| Technology roadmap | [02](02_tech_roadmap.md) | Draft | 2026-06-30 |
+| Standards and MSAs | [03](03_standards_and_msa.md) | In Review | 2026-06-30 |
+| Silicon photonics | [04](04_silicon_photonics.md) | Draft | 2026-06-30 |
+| Transceiver form factors | [05](05_transceiver_form_factors.md) | Draft | 2026-06-30 |
+| Co-packaged optics | [06](06_co_packaged_optics.md) | In Review | 2026-06-30 |
+| Coherent vs direct detect | [07](07_coherent_vs_direct_detect.md) | Draft | 2026-06-30 |
+| Hyperscalers and supplier relationships | [08](08_vendors_hyperscalers.md) | In Review | 2026-06-30 |
+| Component vendors | [09](09_vendors_components.md) | Draft | 2026-06-30 |
+| Systems vendors | [10](10_vendors_systems.md) | Draft | 2026-06-30 |
+| Startups watchlist | [11](11_startups_watchlist.md) | In Review | 2026-06-30 |
+| Patents and IP | [12](12_patents_ip_landscape.md) | In Review | 2026-06-30 |
+| Research papers | [13](13_key_research_papers.md) | In Review | 2026-06-30 |
+| Production and supply chain | [14](14_production_ramp_supply_chain.md) | In Review | 2026-06-30 |
+| Competitive landscape | [15](15_competitive_landscape.md) | Draft | 2026-06-30 |
+| Market sizing | [16](16_market_sizing.md) | In Review | 2026-06-30 |
+| Power and thermal | [17](17_power_and_thermal.md) | In Review | 2026-06-30 |
+| AI datacenter architecture | [18](18_AI_datacenter_architecture.md) | Draft | 2026-06-30 |
+| Regulation and standards bodies | [19](19_regulatory_and_standards_bodies.md) | In Review | 2026-06-30 |
+| Investment and M&A | [20](20_investment_and_ma_tracker.md) | In Review | 2026-06-30 |
+
+### Visual Navigation
+Every numbered section now includes a `Visual Guide` with one or more GitHub-rendered Mermaid diagrams. These diagrams are self-authored summaries of the section logic, so they can be versioned like text and updated alongside the evidence tables.
+
+| Visual Theme | Sections |
+|---|---|
+| System roadmap and link basics | [00](00_executive_summary.md), [01](01_technology_overview.md), [02](02_tech_roadmap.md) |
+| Standards, silicon photonics, form factors, CPO, coherent | [03](03_standards_and_msa.md), [04](04_silicon_photonics.md), [05](05_transceiver_form_factors.md), [06](06_co_packaged_optics.md), [07](07_coherent_vs_direct_detect.md) |
+| Buyer/vendor ecosystem | [08](08_vendors_hyperscalers.md), [09](09_vendors_components.md), [10](10_vendors_systems.md), [11](11_startups_watchlist.md), [15](15_competitive_landscape.md) |
+| Evidence, supply chain, and operations | [12](12_patents_ip_landscape.md), [13](13_key_research_papers.md), [14](14_production_ramp_supply_chain.md), [17](17_power_and_thermal.md), [19](19_regulatory_and_standards_bodies.md) |
+| Market and architecture model | [16](16_market_sizing.md), [18](18_AI_datacenter_architecture.md), [20](20_investment_and_ma_tracker.md) |
+
+### Official Visual Source Register
+Vendor diagrams, product photos, investor-presentation figures, and architecture graphics should be linked to official pages rather than copied into the repository unless reuse rights are clear. The links below are starting points for reader-friendly visuals and future refresh work.
+
+| Organization | Official Visual / Content Source | Best-Fit Sections |
+|---|---|---|
+| Lumentum | Datacom and laser product pages: https://www.lumentum.com/en/products | [09](09_vendors_components.md), [14](14_production_ramp_supply_chain.md), [17](17_power_and_thermal.md) |
+| Coherent | Networking and transceiver portfolio: https://www.coherent.com/networking | [04](04_silicon_photonics.md), [05](05_transceiver_form_factors.md), [09](09_vendors_components.md) |
+| Ciena | WaveLogic and coherent networking pages: https://www.ciena.com/products/wavelogic | [07](07_coherent_vs_direct_detect.md), [10](10_vendors_systems.md), [18](18_AI_datacenter_architecture.md) |
+| Marvell | Optical DSP and PAM4 connectivity pages: https://www.marvell.com/products/networking/optical-dsp.html | [02](02_tech_roadmap.md), [07](07_coherent_vs_direct_detect.md), [09](09_vendors_components.md) |
+| Broadcom | Tomahawk / StrataXGS switch silicon pages: https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs | [02](02_tech_roadmap.md), [06](06_co_packaged_optics.md), [18](18_AI_datacenter_architecture.md) |
+| NVIDIA | Spectrum-X Ethernet platform pages: https://www.nvidia.com/en-us/networking/ethernet/spectrum-x/ | [08](08_vendors_hyperscalers.md), [10](10_vendors_systems.md), [18](18_AI_datacenter_architecture.md) |
+| InnoLight | Optical module product pages: https://www.innolight.com/en | [05](05_transceiver_form_factors.md), [09](09_vendors_components.md), [14](14_production_ramp_supply_chain.md) |
+| Arista | 800G and cloud networking solution pages: https://www.arista.com/en/solutions/800g | [08](08_vendors_hyperscalers.md), [10](10_vendors_systems.md), [15](15_competitive_landscape.md) |
+| Cisco | Silicon One and Acacia/coherent networking pages: https://www.cisco.com/site/us/en/products/networking/silicon-one/index.html | [07](07_coherent_vs_direct_detect.md), [10](10_vendors_systems.md), [15](15_competitive_landscape.md) |
+| Nokia | Photonic Service Engine pages: https://www.nokia.com/networks/ip-networks/photonic-service-engine/ | [07](07_coherent_vs_direct_detect.md), [10](10_vendors_systems.md), [20](20_investment_and_ma_tracker.md) |
+| OIF | CEI and coherent implementation-agreement pages: https://www.oiforum.com/technical-work/ | [03](03_standards_and_msa.md), [07](07_coherent_vs_direct_detect.md) |
+| Ethernet Alliance | Ethernet roadmap: https://ethernetalliance.org/technology/roadmap/ | [02](02_tech_roadmap.md), [03](03_standards_and_msa.md) |
 
 ### Database Scope
 | Included | Excluded unless directly relevant |

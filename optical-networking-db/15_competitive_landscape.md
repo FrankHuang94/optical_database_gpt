@@ -1,5 +1,5 @@
 # Competitive Landscape
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** competition, margins, moats, M-and-A, value-chain
 
@@ -14,6 +14,27 @@ Vertical integration can reduce interface power and accelerate co-design, but it
 - [CONFIRMED] Marvell/Inphi, Cisco/Acacia, II-VI/Coherent, NVIDIA/Mellanox, and Nokia/Infinera illustrate vertical-integration logic.
 - [ESTIMATED] Gross margins vary more by mix and utilization than by nominal layer; ranges below are directional.
 - [CONFIRMED] CPO shifts value from replaceable modules toward ASIC, packaging, optical-engine, and system integration.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  UP["Upstream components"] --> MOD["Modules and optical engines"]
+  MOD --> SYS["Switching / routing / transport systems"]
+  SYS --> CLOUD["Cloud, carrier, enterprise buyers"]
+  TEST["Test equipment"] --> MOD
+  FOUNDRY["Foundry and OSAT"] --> UP
+  CLOUD --> SPEC["Custom specs and volume commitments"]
+  SPEC --> MOD
+```
+
+```mermaid
+flowchart TB
+  MOAT["Competitive moats"] --> IP["DSP, coherent, and SiPh IP"]
+  MOAT --> QUAL["Long customer qualification"]
+  MOAT --> SCALE["Manufacturing scale and yield learning"]
+  MOAT --> SUPPLY["Secured laser, wafer, and test capacity"]
+  MOAT --> SW["System software and operational integration"]
+```
 
 ## Detailed Content
 ### Porter’s Five Forces

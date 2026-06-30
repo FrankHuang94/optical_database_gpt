@@ -1,5 +1,5 @@
 # Market Sizing
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** TAM, forecast, transceivers, CPO, AI-optics
 
@@ -16,6 +16,27 @@ Licensed LightCounting, Dell'Oro, Omdia, Cignal AI, and IDTechEx tables were not
 - [CONFIRMED] Omdia forecast global datacenter investment approaching $1.6T by 2030 and more than $600B of 2026 deployment by leading technology enterprises [Source: Omdia, 2026-05-28].
 - [CONFIRMED] Lumentum management presented a broad optical TAM reaching about $90B by 2030, implying roughly 40% CAGR from 2025 [Source: Lumentum OFC investor briefing coverage, 2026-03-19].
 - [ESTIMATED] Finished datacenter transceivers are a materially smaller subset than the broad optical-content TAM [HIGH confidence].
+
+## Visual Guide
+```mermaid
+flowchart TB
+  A["AI accelerator shipments"] --> B["Network ports per accelerator"]
+  B --> C["Optical attach rate"]
+  C --> D["Transceiver units"]
+  D --> E["ASP by speed and reach"]
+  E --> F["Datacenter optical TAM"]
+  F --> G["Sensitivity: cluster topology, radix, reuse, ASP erosion"]
+```
+
+```mermaid
+flowchart LR
+  TAM["Total optical market"] --> SAM["Datacenter optical SAM"]
+  SAM --> SOM["Serviceable obtainable market"]
+  SOM --> V1["Component vendors"]
+  SOM --> V2["Module vendors"]
+  SOM --> V3["Systems vendors"]
+  SOM --> V4["Test and manufacturing"]
+```
 
 ## Detailed Content
 ### Forecast Evidence Register

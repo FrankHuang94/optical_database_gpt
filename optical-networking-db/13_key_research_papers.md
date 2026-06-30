@@ -1,5 +1,5 @@
 # Key Research Papers
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** bibliography, OFC, ECOC, IEEE-JLT, photonics, datacenter-networks
 
@@ -16,6 +16,30 @@ The 2025-2026 additions include 225-Gbaud PAM4/TFLN transmission, coherent CPO c
 - [CONFIRMED] A 2025 result reported net 3.2 Tb/s, 225-Gbaud PAM4 O-band IM/DD transmission using CMOS 3 nm SerDes and thin-film lithium-niobate modulators [Source: arXiv:2503.24147].
 - [CONFIRMED] 2025-2026 preprints increasingly analyze coherent CPO and cross-layer optical chiplet/topology design.
 - [ESTIMATED] Decision-useful research reports full-link energy, BER/FEC, thermal control, manufacturing assumptions, and failure behavior rather than isolated device records [HIGH confidence].
+
+## Visual Guide
+```mermaid
+flowchart TB
+  A["Research claim"] --> B{"Evidence type"}
+  B -->|"Device demo"| C["Check bandwidth, loss, yield, temperature"]
+  B -->|"System demo"| D["Check scale, topology, traffic, operations"]
+  B -->|"Model / simulation"| E["Check assumptions and sensitivity"]
+  C --> F["Commercial readiness inference"]
+  D --> F
+  E --> F
+  F --> G["Map to roadmap section"]
+```
+
+```mermaid
+flowchart LR
+  P["Paper topics"] --> SIPH["SiPh integration"]
+  P --> CPO["CPO architecture"]
+  P --> MOD["High-speed modulation"]
+  P --> OCS["Optical circuit switching"]
+  P --> POWER["Power efficiency"]
+  P --> AI["AI fabric optimization"]
+  P --> FIBER["Novel fiber and WDM"]
+```
 
 ## Detailed Content
 ### 1. Silicon Photonics Fundamentals and Integration

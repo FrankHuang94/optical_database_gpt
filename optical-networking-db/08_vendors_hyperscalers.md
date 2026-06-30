@@ -1,5 +1,5 @@
 # Hyperscaler Optical Strategies
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** hyperscalers, cloud, suppliers, custom-silicon, OCS, SONiC
 
@@ -16,6 +16,30 @@ The strongest current supplier evidence is upstream: Meta and Amazon have disclo
 - [CONFIRMED] Amazon announced a multibillion-dollar Corning fiber/connectivity agreement on June 8, 2026 [Source: Amazon/Corning agreement coverage, 2026-06-08].
 - [CONFIRMED] NVIDIA committed $2B each to Coherent and Lumentum and entered nonexclusive purchase/capacity arrangements [Source: company announcement coverage, 2026-03].
 - [ESTIMATED] Public evidence is strongest where long-lead fiber and laser capacity requires contractual commitments; module awards are usually confidential [HIGH confidence].
+
+## Visual Guide
+```mermaid
+flowchart LR
+  H["Hyperscaler architecture team"] --> SPEC["Custom optical and network specs"]
+  SPEC --> ASIC["Switch ASIC and NIC roadmap"]
+  SPEC --> MOD["Module vendor qualification"]
+  SPEC --> FIBER["Fiber plant and cabling standards"]
+  MOD --> EMS["Contract manufacturing and test"]
+  ASIC --> SYS["System vendor or ODM"]
+  SYS --> DEPLOY["Cluster deployment"]
+  DEPLOY --> FEEDBACK["Failure, power, and telemetry feedback"]
+  FEEDBACK --> SPEC
+```
+
+```mermaid
+flowchart TB
+  A["Public evidence strength"] --> B["Filings and named contracts"]
+  A --> C["Product launch alignment"]
+  A --> D["Conference talks and standards participation"]
+  A --> E["Supply-chain and import signals"]
+  B --> F["Highest confidence"]
+  E --> G["Inference only"]
+```
 
 ## Detailed Content
 ### Hyperscaler Strategy Matrix

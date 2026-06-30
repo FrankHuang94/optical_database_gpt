@@ -1,5 +1,5 @@
 # Technology Overview
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** fundamentals, modulation, fiber, metrics, glossary
 
@@ -14,6 +14,28 @@ Short links commonly use multimode fiber (MMF) with VCSELs or single-mode fiber 
 - [CONFIRMED] Link budgets must include transmitter power, receiver sensitivity, connector/splice/coupling loss, and engineering margin.
 - [ESTIMATED] End-to-end link energy, not isolated photonic-device energy, is the correct basis for architecture comparisons [Source: OIF/COBO presentations, 2023; HIGH confidence].
 - [CONFIRMED] Pre-FEC BER, post-FEC BER, latency, and coding overhead must be reported together to compare links correctly.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  E["Electrical bits from ASIC or NIC"] --> D["Driver / DSP / CDR"]
+  D --> L["Laser source"]
+  L --> M["Modulator"]
+  M --> F["Fiber channel"]
+  F --> P["Photodiode"]
+  P --> TIA["TIA / equalizer"]
+  TIA --> R["Recovered electrical bits"]
+```
+
+```mermaid
+flowchart TB
+  S["Link design choice"] --> R1{"Reach"}
+  R1 -->|"meters"| C["Copper or VCSEL MMF"]
+  R1 -->|"hundreds of meters"| DD["Direct-detect SMF"]
+  R1 -->|"kilometers+"| COH["Coherent SMF"]
+  DD --> K1["Optimize cost, power, lane count"]
+  COH --> K2["Optimize spectral efficiency and link budget"]
+```
 
 ## Detailed Content
 ### Optical Link Building Blocks

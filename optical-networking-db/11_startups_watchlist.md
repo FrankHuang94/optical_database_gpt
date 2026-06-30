@@ -1,5 +1,5 @@
 # Startups Watchlist
-> **Last Updated:** 2026-06-09
+> **Last Updated:** 2026-06-30
 > **Status:** In Review
 > **Tags:** startups, venture-capital, optical-I-O, silicon-photonics, M-and-A
 
@@ -16,6 +16,25 @@ The list separates active core optical-networking companies from adjacent compan
 - [CONFIRMED] Celestial AI announced a $250M Series C in March 2025; its reported Marvell transaction remains [TO VERIFY] for signed terms and closing status.
 - [CONFIRMED] AMD acquired Enosemi on May 28, 2025, so Enosemi is tracked as M&A rather than an active startup [Source: AMD, 2025-05-28].
 - [CONFIRMED] Enavate Sciences and DragonWave are category mismatches for an active datacenter-optical startup cohort.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  A["Startup diligence funnel"] --> B["Technology claim"]
+  B --> C["Prototype or customer validation"]
+  C --> D["Manufacturing and packaging path"]
+  D --> E["Standards and ecosystem fit"]
+  E --> F["Funding runway and strategic partners"]
+  F --> G["Acquisition, scale-up, or stall outcome"]
+```
+
+```mermaid
+flowchart LR
+  CPO["CPO / optical I/O"] --> AYAR["Ayar Labs, Celestial AI, Ranovus"]
+  OCS["Optical circuit switching"] --> XCONN["XConn, Lightmatter Passage, Calient-like systems"]
+  HCF["Novel fiber"] --> LUMEN["Lumenisity-type hollow-core ecosystem"]
+  DSP["DSP / SerDes"] --> CHIP["Chiplet and mixed-signal startups"]
+```
 
 ## Detailed Content
 ### Active Core Watchlist
